@@ -28,7 +28,6 @@ def play(board, iterations, max_x, max_y):
         for y in range(MIN_Y-1, MAX_Y+2):
             for x in range(MIN_X-1, MAX_X+2):
                 neighbors = get_neighbors(x, y, temp_board)
-                # print(neighbors, x, y)
                 #scenario 1: underpopulation
                 if neighbors < 2:
                     die(x, y, board)
@@ -78,7 +77,7 @@ def die(x, y, board):
 
 #print out the board
 def print_board(board):
-    for y in range (MIN_Y, MAX_Y + 1):
+    for y in range (MAX_Y, MIN_Y - 1, -1):
         row = ""
         for x in range(MIN_X, MAX_X + 1):
             if board[(x, y)] == 0:
