@@ -95,8 +95,5 @@ def get_neighbors(x, y, board):
             #check if it's in board and alive and not the position
             if i!=0 or j!=0:
                 if (x+i,y+j) in board and board[(x+i,y+j)] == 1:
-                    # print("position:")
-                    # print(x, y)
-                    # print(x+i,y+j)
                     neighbors += 1
     return neighbors
